@@ -49,7 +49,7 @@ class Menu {
     start() {
         let selection = this.showMainMenuOptions();
         
-        while (selection != 0) {
+        while (selection !== 0) {
             switch (selection) {
                 case '1':
                     this.createBranch();
