@@ -10,11 +10,8 @@ class Employee {
         this.title = title;
         this.branch = branch
     }
-
-    describe() {
-        return `${this.name}, is our ${title} at the ${branch} branch.`;
+    
     }
-}
 
 class Branch {
     constructor (name) {
@@ -22,21 +19,15 @@ class Branch {
         this.employees = [];
     }
 
-    // When we add an employee, for each instance of the Employee the input will push a new employee, otherwise it will throw an error.
-
+    // When we add an employee, for each instance of the Employee the input will push a new employee to the array of employees.
 
     addEmployee (employee) {
         if (employee instanceof Employee) {
             this.employees.push();
-        } else {
-            throw new Error (`Input is not an employee: ${employee}`)
-        }
+        } 
     }
 
-    describe() {
-       return `${this.branch} has ${this.employees.length} employees.`
     }
-}
 
     /* The menu class contains all of the contents of the menu we are building. We set the branches to an array as they will need to be 
     input. The selectedBranch is set to null as it currently has no value. The value will be added by the user. 
